@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Hưng AI Solution cung cấp giải pháp SEO tổng thể, thiết kế website, landing page, nội dung chuẩn SEO, Social và coaching SEO 1:1.">
+  <meta name="theme-color" content="#040815">
+  <title>Hưng AI Solution | Giải pháp Digital Marketing</title>
+
+<title>Hưng AI Solution Intro</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+<style>
+/* Layout: một sân khấu tối chiếm gần hết màn hình. Lớp xa nhất là tinh vân và thiên hà (canvas),
+   lớp giữa là hành tinh, lớp gần là siêu nhân ở giữa và 6 khung dịch vụ quay quanh theo quỹ đạo elip. */
+:root {
+  --space: #040815;
+  --space-2: #0A1230;
+  --ink: #0A0F1E;
+  --blue: #1E5BFF;
+  --sky: #38BDF8;
+  --white: #FFFFFF;
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { background: var(--space); }
+body {
+  margin: 0; background: var(--space); color: var(--white); font-family: var(--font);
+  padding-left: max(0px, env(safe-area-inset-left, 0px)); padding-right: max(0px, env(safe-area-inset-right, 0px));
+  overflow-x: hidden;
+}
+button { font-family: inherit; }
+:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; border-radius: 10px; }
+
+.stage {
+  position: relative; width: 100%; height: clamp(620px, 90vh, 840px); overflow: hidden;
+  background: radial-gradient(900px 520px at 50% 55%, #0E1E5A 0%, rgba(14,30,90,0) 70%), linear-gradient(180deg, #02050F 0%, #071033 100%);
+  --mx: 0; --my: 0; isolation: isolate;
+}
+#sky { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; }
+
+/* Tinh vân xoay */
+.nebula-wrap { position: absolute; inset: 0; z-index: 0; transform: translate(calc(var(--mx) * -10px), calc(var(--my) * -8px)); }
+.nebula { position: absolute; left: 50%; top: 50%; width: 130vmax; height: 130vmax; margin: -65vmax 0 0 -65vmax; border-radius: 50%;
+  background: conic-gradient(from 0deg, rgba(30,91,255,.0), rgba(30,91,255,.34), rgba(56,189,248,.0) 30%, rgba(56,189,248,.26) 52%, rgba(10,54,200,0) 70%, rgba(30,91,255,.3) 86%, rgba(30,91,255,0));
+  filter: blur(70px); animation: spin 140s linear infinite; }
+.nebula.n2 { width: 90vmax; height: 90vmax; margin: -45vmax 0 0 -45vmax; opacity: .55; animation-duration: 200s; animation-direction: reverse; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Hành tinh */
+.planets { position: absolute; inset: 0; z-index: 2; pointer-events: none; transform: translate(calc(var(--mx) * -26px), calc(var(--my) * -18px)); }
+.pl { position: absolute; }
+.pl .globe { position: absolute; inset: 0; border-radius: 50%; overflow: hidden; }
+.pl .globe::before { content: ""; position: absolute; inset: 0; background-repeat: repeat-x; animation: roll linear infinite; }
+.pl .globe::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(circle at 30% 28%, rgba(255,255,255,.22) 0%, transparent 34%, rgba(0,4,24,.82) 100%); }
+@keyframes roll { to { background-position-x: -200%; } }
+.pl.p1 { --d: clamp(120px, 17vw, 210px); width: var(--d); height: var(--d); left: 5%; top: 9%; animation: drift 16s ease-in-out infinite alternate; }
+.pl.p1 .globe { background: radial-gradient(circle at 32% 28%, #9BE3FF 0%, #2F7BFF 40%, #0B2A8F 75%, #040B2E 100%); }
+.pl.p1 .globe::before { background-image: radial-gradient(ellipse 60% 18% at 22% 30%, rgba(255,255,255,.28), transparent 70%), radial-gradient(ellipse 50% 14% at 70% 55%, rgba(255,255,255,.2), transparent 70%), radial-gradient(ellipse 40% 12% at 45% 78%, rgba(10,30,120,.5), transparent 70%); background-size: 100% 100%; animation-duration: 38s; width: 200%; }
+.pl.p1 .ring { position: absolute; left: -48%; top: -48%; width: 196%; height: 196%; border-radius: 50%; transform: rotateX(74deg); border: 11px solid rgba(168,226,255,.5); box-shadow: 0 0 0 7px rgba(120,190,255,.16), inset 0 0 0 7px rgba(120,190,255,.16); }
+.pl.p1 .ring.front { clip-path: inset(50% 0 0 0); }
+.pl.p1 .ringwrap { position: absolute; inset: 0; transform: rotate(-18deg); }
+.pl.p2 { --d: clamp(54px, 8vw, 100px); width: var(--d); height: var(--d); right: 8%; bottom: 14%; animation: drift 12s ease-in-out -4s infinite alternate-reverse; }
+.pl.p2 .globe { background: radial-gradient(circle at 32% 28%, #C9F2FF 0%, #38BDF8 38%, #1366C9 78%, #061A52 100%); }
+.pl.p2 .globe::before { background-image: radial-gradient(circle 9% at 30% 36%, rgba(0,40,110,.4), transparent 80%), radial-gradient(circle 12% at 66% 62%, rgba(0,40,110,.35), transparent 80%), radial-gradient(circle 6% at 52% 22%, rgba(0,40,110,.4), transparent 80%); animation-duration: 22s; width: 200%; }
+.pl.p3 { --d: clamp(26px, 3.4vw, 44px); width: var(--d); height: var(--d); right: 22%; top: 12%; animation: drift 10s ease-in-out -2s infinite alternate; }
+.pl.p3 .globe { background: radial-gradient(circle at 32% 28%, #E6EEFF 0%, #8FA8E8 45%, #2B3C7D 100%); }
+.pl.p4 { --d: clamp(70px, 10vw, 130px); width: var(--d); height: var(--d); left: 10%; bottom: 8%; opacity: .9; animation: drift 18s ease-in-out -6s infinite alternate; }
+.pl.p4 .globe { background: radial-gradient(circle at 32% 28%, #6EA2FF 0%, #1E3FBE 45%, #0A1550 85%, #030618 100%); }
+.pl.p4 .globe::before { background-image: radial-gradient(ellipse 70% 10% at 30% 40%, rgba(255,255,255,.2), transparent 70%), radial-gradient(ellipse 60% 9% at 65% 66%, rgba(255,255,255,.16), transparent 70%); width: 200%; animation-duration: 28s; }
+@keyframes drift { from { transform: translate3d(0,0,0); } to { transform: translate3d(14px,-18px,0); } }
+
+/* Siêu nhân */
+.hero-pos { position: absolute; left: 50%; top: 52%; width: var(--hw); transform: translate(-50%, -50%); z-index: 4; --hw: clamp(150px, 20vw, 210px); perspective: 800px; }
+.drop, .spin, .bob { transform-style: preserve-3d; }
+.bob.idle { animation: float 4.2s ease-in-out infinite; }
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+.hero-svg { display: block; width: 100%; height: auto; overflow: visible; filter: drop-shadow(0 18px 30px rgba(30,91,255,.55)); }
+.arm { transform-box: view-box; }
+.arm.l { transform-origin: 71px 128px; }
+.arm.r { transform-origin: 169px 128px; }
+.hero-glow { position: absolute; left: 50%; bottom: -14px; width: 120%; height: 38px; transform: translateX(-50%); border-radius: 50%; background: radial-gradient(ellipse, rgba(56,189,248,.75), transparent 70%); filter: blur(6px); animation: pulse 2.2s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { opacity: .6; } 50% { opacity: 1; } }
+
+/* Hiệu ứng bắn */
+.bolt { position: absolute; z-index: 5; width: 320px; height: 18px; border-radius: 999px; pointer-events: none; filter: drop-shadow(0 0 14px rgba(56,189,248,.95)); }
+.bolt.L { background: linear-gradient(to left, #fff 0%, #BDEBFF 18%, #38BDF8 52%, rgba(30,91,255,0) 100%); }
+.bolt.R { background: linear-gradient(to right, #fff 0%, #BDEBFF 18%, #38BDF8 52%, rgba(30,91,255,0) 100%); }
+.flash { position: absolute; z-index: 6; width: 150px; height: 150px; margin: -75px 0 0 -75px; border-radius: 50%; pointer-events: none; background: radial-gradient(circle, #fff 0%, rgba(160,225,255,.95) 22%, rgba(56,189,248,.5) 48%, rgba(30,91,255,0) 72%); }
+.shock { position: absolute; z-index: 3; width: 160px; height: 46px; margin: -23px 0 0 -80px; border-radius: 50%; pointer-events: none; border: 4px solid rgba(160,225,255,.9); box-shadow: 0 0 24px rgba(56,189,248,.9); }
+
+/* Khung dịch vụ */
+.svc { --cs: clamp(92px, 12vw, 134px); position: absolute; left: 0; top: 0; z-index: 3; width: var(--cs); height: var(--cs); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 9px; padding: 10px; text-align: center; border-radius: 20px; color: #fff; font-weight: 800; font-size: clamp(12px, 1.3vw, 15.5px); line-height: 1.22; letter-spacing: -0.01em; cursor: default; opacity: 0; will-change: transform;
+  background: linear-gradient(160deg, rgba(48,100,255,.62), rgba(8,18,62,.9)); border: 1.5px solid rgba(130,205,255,.75);
+  box-shadow: 0 0 0 1px rgba(255,255,255,.08) inset, 0 16px 34px -10px rgba(30,91,255,.95), 0 0 28px rgba(56,189,248,.35); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+.svc svg { width: clamp(24px, 2.7vw, 34px); height: clamp(24px, 2.7vw, 34px); color: var(--sky); flex: none; }
+.svc:hover { border-color: #fff; }
+
+/* Giao diện phủ */
+.topbar { position: absolute; z-index: 8; top: 0; left: 0; right: 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px max(18px, env(safe-area-inset-right, 0px)) 0 max(18px, env(safe-area-inset-left, 0px)); }
+.logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; letter-spacing: -0.02em; }
+.logo-mark { width: 36px; height: 36px; border-radius: 11px; background: linear-gradient(135deg, #0A36C8, #1E5BFF 55%, #38BDF8); display: grid; place-items: center; box-shadow: 0 8px 18px -6px rgba(30,91,255,.8); }
+.logo-mark svg { width: 20px; height: 20px; }
+.ctrls { display: flex; gap: 8px; }
+.pill { font-weight: 700; font-size: 14px; color: #fff; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.22); border-radius: 999px; padding: 9px 16px; cursor: pointer; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); transition: background .2s, transform .2s; }
+.pill:hover { background: rgba(255,255,255,.2); transform: translateY(-1px); }
+.cta { position: absolute; z-index: 8; left: 50%; bottom: calc(26px + env(safe-area-inset-bottom, 0px)); transform: translate(-50%, 24px); opacity: 0; pointer-events: none; text-align: center; transition: opacity .6s ease, transform .6s ease; width: min(92%, 560px); }
+.cta.show { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
+.cta h2 { margin: 0 0 14px; font-size: clamp(1.15rem, 2.4vw, 1.6rem); font-weight: 800; letter-spacing: -0.02em; text-wrap: balance; }
+.cta .go { display: inline-block; font: inherit; font-weight: 800; font-size: 16px; color: #fff; border: 0; cursor: pointer; padding: 14px 28px; border-radius: 14px; background: linear-gradient(120deg, #1E5BFF, #38BDF8); box-shadow: 0 12px 30px -8px rgba(30,91,255,.9); }
+.hint { position: absolute; z-index: 8; left: 50%; bottom: calc(22px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); font-size: 13px; font-weight: 600; color: #9fb4e8; opacity: 0; transition: opacity .4s; }
+.hint.show { opacity: 1; }
+
+@media (max-width: 560px) { .logo span { display: none; } .pill { padding: 8px 13px; font-size: 13px; } }
+@media (prefers-reduced-motion: reduce) { .nebula, .pl, .pl .globe::before, .hero-glow, .bob.idle { animation: none !important; } }
+</style>
+
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-web" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="15" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 9.5h18" stroke="currentColor" stroke-width="2"/><path d="M8 14h5M8 16.5h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20l1-4.5L16.5 4a2.1 2.1 0 013 3L8 18.5 4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 6.5l3.5 3.5" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6" r="2.6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="18" r="2.6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8.3 10.8l6.9-3.6M8.3 13.2l6.9 3.6" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3.4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 20c0-3.4 2.7-5.8 6-5.8s6 2.4 6 5.8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M17 8.5v5M14.5 11h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+
+<div class="stage" id="stage">
+  <div class="nebula-wrap" aria-hidden="true"><div class="nebula"></div><div class="nebula n2"></div></div>
+  <canvas id="sky" aria-hidden="true"></canvas>
+
+  <div class="planets" aria-hidden="true">
+    <div class="pl p1"><div class="ringwrap"><div class="ring back"></div></div><div class="globe"></div><div class="ringwrap"><div class="ring front"></div></div></div>
+    <div class="pl p2"><div class="globe"></div></div>
+    <div class="pl p3"><div class="globe"></div></div>
+    <div class="pl p4"><div class="globe"></div></div>
+  </div>
+
+  <div class="topbar">
+    <div class="logo"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M6 4v16M18 4v16M6 12h12" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg></span><span>Hưng AI Solution</span></div>
+    <div class="ctrls">
+      <button class="pill" id="skipBtn" type="button" hidden>Bỏ qua</button>
+      <button class="pill" id="replayBtn" type="button">↻ Xem lại</button>
+    </div>
+  </div>
+
+  <div class="hero-pos" id="heroPos">
+    <div class="drop" id="drop">
+      <div class="bob" id="bob">
+        <div class="spin" id="spin">
+          <svg class="hero-svg" id="heroSvg" viewBox="0 0 240 330" role="img" aria-label="Siêu nhân của Hưng AI Solution">
+            <defs>
+              <linearGradient id="gSuit" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4C92FF"/><stop offset="1" stop-color="#1448D6"/></linearGradient>
+              <linearGradient id="gArm" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2F7BFF"/><stop offset="1" stop-color="#1A55E6"/></linearGradient>
+              <linearGradient id="gVisor" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0E1A45"/><stop offset="1" stop-color="#050A22"/></linearGradient>
+              <radialGradient id="gEye"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".45" stop-color="#7FE0FF"/><stop offset="1" stop-color="#38BDF8"/></radialGradient>
+            </defs>
+            <!-- chân -->
+            <rect x="88" y="198" width="30" height="82" rx="13" fill="url(#gSuit)"/>
+            <rect x="122" y="198" width="30" height="82" rx="13" fill="url(#gSuit)"/>
+            <rect x="82" y="268" width="42" height="36" rx="14" fill="#0A0F1E"/>
+            <rect x="116" y="268" width="42" height="36" rx="14" fill="#0A0F1E"/>
+            <rect x="86" y="284" width="34" height="5" rx="2.5" fill="#38BDF8"/>
+            <rect x="120" y="284" width="34" height="5" rx="2.5" fill="#38BDF8"/>
+            <!-- cánh tay phải của nhân vật nằm bên trái màn hình -->
+            <g class="arm l" id="armL">
+              <rect x="58" y="116" width="26" height="62" rx="13" fill="url(#gArm)"/>
+              <rect x="55" y="160" width="32" height="46" rx="14" fill="#FFFFFF"/>
+              <rect x="52" y="196" width="38" height="42" rx="13" fill="#0A0F1E"/>
+              <circle cx="71" cy="230" r="9" fill="url(#gEye)"/>
+              <rect x="56" y="204" width="30" height="5" rx="2.5" fill="#38BDF8"/>
+            </g>
+            <g class="arm r" id="armR">
+              <rect x="156" y="116" width="26" height="62" rx="13" fill="url(#gArm)"/>
+              <rect x="153" y="160" width="32" height="46" rx="14" fill="#FFFFFF"/>
+              <rect x="150" y="196" width="38" height="42" rx="13" fill="#0A0F1E"/>
+              <circle cx="169" cy="230" r="9" fill="url(#gEye)"/>
+              <rect x="154" y="204" width="30" height="5" rx="2.5" fill="#38BDF8"/>
+            </g>
+            <!-- thân -->
+            <rect x="68" y="110" width="104" height="106" rx="32" fill="url(#gSuit)"/>
+            <rect x="90" y="126" width="60" height="50" rx="15" fill="#FFFFFF"/>
+            <path d="M126 130 L108 156 H120 L113 174 L136 146 H123 Z" fill="#1E5BFF"/>
+            <rect x="68" y="196" width="104" height="14" rx="7" fill="#0A0F1E"/>
+            <circle cx="120" cy="203" r="6" fill="#38BDF8"/>
+            <!-- đầu -->
+            <path d="M120 22 L108 46 H132 Z" fill="#FFFFFF"/>
+            <circle cx="120" cy="78" r="42" fill="url(#gSuit)"/>
+            <path d="M88 52 Q120 28 152 52" fill="none" stroke="#9BD4FF" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+            <rect x="86" y="62" width="68" height="32" rx="16" fill="url(#gVisor)"/>
+            <ellipse cx="105" cy="78" rx="8" ry="9" fill="url(#gEye)"/>
+            <ellipse cx="135" cy="78" rx="8" ry="9" fill="url(#gEye)"/>
+            <circle cx="77" cy="80" r="9" fill="#FFFFFF"/>
+            <circle cx="163" cy="80" r="9" fill="#FFFFFF"/>
+          </svg>
+          <div class="hero-glow"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="svc" data-i="0"><svg><use href="#i-search"/></svg><span>SEO tổng thể</span></div>
+  <div class="svc" data-i="1"><svg><use href="#i-web"/></svg><span>Thiết kế website</span></div>
+  <div class="svc" data-i="2"><svg><use href="#i-target"/></svg><span>Thiết kế landing page</span></div>
+  <div class="svc" data-i="3"><svg><use href="#i-pen"/></svg><span>Viết bài chuẩn SEO</span></div>
+  <div class="svc" data-i="4"><svg><use href="#i-share"/></svg><span>Social tổng thể</span></div>
+  <div class="svc" data-i="5"><svg><use href="#i-user"/></svg><span>Coaching SEO 1:1</span></div>
+
+  <div class="cta" id="cta"><h2>Sáu dịch vụ, một đội, một chiến lược để bạn lên top và có khách</h2><button class="go" type="button">Nhận tư vấn miễn phí</button></div>
+</div>
+
+<script>
+(function () {
+  var $ = function (s) { return document.querySelector(s); };
+  var stage = $('#stage'), cv = $('#sky'), ctx = cv.getContext('2d');
+  var heroPos = $('#heroPos'), drop = $('#drop'), bob = $('#bob'), spin = $('#spin'), svg = $('#heroSvg');
+  var armL = $('#armL'), armR = $('#armR'), cta = $('#cta'), skipBtn = $('#skipBtn'), replayBtn = $('#replayBtn');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.svc')).map(function (el) { return { el: el, start: Infinity, p: 0 }; });
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var W = 0, H = 0, dpr = 1, token = 0, mx = 0, my = 0, tmx = 0, tmy = 0;
+  var angle = 0, speed = 0, hovering = false, lastT = performance.now();
+
+  /* ---------- Bầu trời: thiên hà xoắn ốc 3D + sao ---------- */
+  var stars = [], gal = [], i;
+  function rnd(a, b) { return a + Math.random() * (b - a); }
+  for (i = 0; i < 360; i++) stars.push({ x: Math.random(), y: Math.random(), z: Math.random(), tw: rnd(0, 6.28) });
+  for (i = 0; i < 1500; i++) {
+    var r = Math.pow(Math.random(), 0.62), arm = i % 3, th = r * 7.2 + arm * 2.0944 + rnd(-0.32, 0.32) * (0.4 + r);
+    var hue = 205 + r * 18, sat = 55 + r * 40, lig = 92 - r * 38;
+    gal.push({ r: r, th: th, y: rnd(-1, 1) * (1 - r) * 0.55, s: rnd(0.8, 2.1), c: 'hsla(' + hue.toFixed(0) + ',' + sat.toFixed(0) + '%,' + lig.toFixed(0) + '%,' + rnd(0.45, 0.95).toFixed(2) + ')' });
+  }
+  function sizeCanvas() {
+    dpr = Math.min(2, window.devicePixelRatio || 1);
+    W = stage.clientWidth; H = stage.clientHeight;
+    cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function drawSky(t) {
+    ctx.clearRect(0, 0, W, H);
+    var k;
+    for (k = 0; k < stars.length; k++) {
+      var s = stars[k];
+      var a = 0.35 + 0.65 * (0.5 + 0.5 * Math.sin(t * 0.0016 * (0.5 + s.z) + s.tw));
+      ctx.fillStyle = 'rgba(205,228,255,' + a.toFixed(2) + ')';
+      var sz = 0.7 + s.z * 1.5;
+      ctx.fillRect(s.x * W + mx * s.z * 22, s.y * H + my * s.z * 16, sz, sz);
+    }
+    var gx = W * 0.8 + mx * -18, gy = H * 0.26 + my * -12, R = Math.min(W, H) * 0.5;
+    var g = ctx.createRadialGradient(gx, gy, 0, gx, gy, R * 0.55);
+    g.addColorStop(0, 'rgba(190,225,255,.55)'); g.addColorStop(0.35, 'rgba(56,150,255,.22)'); g.addColorStop(1, 'rgba(30,91,255,0)');
+    ctx.fillStyle = g; ctx.fillRect(gx - R, gy - R, R * 2, R * 2);
+    var spinA = t * 0.00008, tilt = 1.12, ct = Math.cos(tilt), st = Math.sin(tilt);
+    for (k = 0; k < gal.length; k++) {
+      var p = gal[k], ang = p.th + spinA;
+      var x = Math.cos(ang) * p.r * R, z0 = Math.sin(ang) * p.r * R, y0 = p.y * R * 0.18;
+      var y = y0 * ct - z0 * st, z = y0 * st + z0 * ct;
+      var per = 700 / (700 + z * 0.8);
+      ctx.fillStyle = p.c;
+      var ps = p.s * per;
+      ctx.fillRect(gx + x * per, gy + y * per, ps, ps);
+    }
+  }
+
+  /* ---------- Quỹ đạo dịch vụ ---------- */
+  function easeOutBack(x) { var c1 = 1.5, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); }
+  function updateCards(now, dt) {
+    var cx = W / 2, cy = H * 0.52 + 6;
+    var rx = Math.min(W * (W < 640 ? 0.35 : 0.38), 440), ry = Math.max(56, rx * 0.3);
+    var anyStarted = false, k;
+    for (k = 0; k < cards.length; k++) if (now >= cards[k].start) { anyStarted = true; break; }
+    var target = anyStarted && !hovering && !reduce ? 0.00042 : 0;
+    speed += (target - speed) * Math.min(1, dt * 0.004);
+    angle += dt * speed;
+    for (k = 0; k < cards.length; k++) {
+      var c = cards[k], p = Math.max(0, Math.min(1, (now - c.start) / 950));
+      c.p = p;
+      if (p <= 0) { c.el.style.opacity = '0'; continue; }
+      var e = easeOutBack(p);
+      var a = angle + k * (Math.PI * 2 / cards.length) - 0.4;
+      var z = Math.sin(a);
+      var s = c.el.offsetWidth || 110;
+      var x = cx + Math.cos(a) * rx * e;
+      var y = cy + Math.sin(a) * ry * e + (Math.cos(a) * rx * e) * 0.09;
+      var sc = (0.25 + 0.75 * Math.min(1, e)) * (0.84 + 0.2 * z);
+      c.el.style.transform = 'translate3d(' + (x - s / 2).toFixed(1) + 'px,' + (y - s / 2).toFixed(1) + 'px,0) scale(' + sc.toFixed(3) + ')';
+      c.el.style.opacity = String(Math.min(1, p * 3) * (0.8 + 0.2 * (z * 0.5 + 0.5)));
+      c.el.style.zIndex = z > 0.05 ? '6' : '3';
+    }
+  }
+  cards.forEach(function (c) {
+    c.el.addEventListener('pointerenter', function () { hovering = true; });
+    c.el.addEventListener('pointerleave', function () { hovering = false; });
+  });
+
+  /* ---------- Vòng lặp vẽ ---------- */
+  function frame(now) {
+    var dt = Math.min(60, now - lastT); lastT = now;
+    mx += (tmx - mx) * 0.06; my += (tmy - my) * 0.06;
+    stage.style.setProperty('--mx', mx.toFixed(3)); stage.style.setProperty('--my', my.toFixed(3));
+    drawSky(now);
+    updateCards(now, dt);
+    requestAnimationFrame(frame);
+  }
+  stage.addEventListener('pointermove', function (e) {
+    var r = stage.getBoundingClientRect();
+    tmx = (e.clientX - r.left) / r.width - 0.5; tmy = (e.clientY - r.top) / r.height - 0.5;
+  });
+  window.addEventListener('resize', sizeCanvas);
+
+  /* ---------- Kịch bản mở đầu ---------- */
+  function sleep(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+  function anim(el, frames, opts) { var a = el.animate(frames, opts); return a.finished.catch(function () {}).then(function () { return a; }); }
+  function clearFx() { Array.prototype.slice.call(stage.querySelectorAll('.bolt,.flash,.shock')).forEach(function (n) { n.remove(); }); }
+  function cancelAll() { [drop, spin, bob, armL, armR, stage].forEach(function (el) { el.getAnimations().forEach(function (a) { a.cancel(); }); }); }
+
+  function resetScene() {
+    cancelAll(); clearFx();
+    bob.classList.remove('idle');
+    drop.style.transform = 'translateY(' + (-(stage.clientHeight * 1.3)) + 'px)';
+    armL.style.transform = 'rotate(0deg)'; armR.style.transform = 'rotate(0deg)';
+    cards.forEach(function (c) { c.start = Infinity; });
+    angle = 0; speed = 0;
+    cta.classList.remove('show');
+  }
+
+  function stageXY(el) { var sr = stage.getBoundingClientRect(), r = el.getBoundingClientRect(); return { sr: sr, r: r }; }
+
+  function shockwave() {
+    var o = stageXY(svg), n = document.createElement('div');
+    n.className = 'shock';
+    n.style.left = (o.r.left - o.sr.left + o.r.width / 2) + 'px';
+    n.style.top = (o.r.bottom - o.sr.top - 8) + 'px';
+    stage.appendChild(n);
+    anim(n, [{ transform: 'scale(.2)', opacity: 1 }, { transform: 'scale(3.4)', opacity: 0 }], { duration: 650, easing: 'ease-out' }).then(function () { n.remove(); });
+  }
+  function flashAt(x, y, big) {
+    var f = document.createElement('div'); f.className = 'flash'; f.style.left = x + 'px'; f.style.top = y + 'px';
+    stage.appendChild(f);
+    anim(f, [{ transform: 'scale(.2)', opacity: 1 }, { transform: 'scale(' + (big ? 1.7 : 1.2) + ')', opacity: 0 }], { duration: big ? 320 : 260, easing: 'ease-out' }).then(function () { f.remove(); });
+  }
+  function shake(px) {
+    anim(stage, [{ transform: 'translate(0,0)' }, { transform: 'translate(' + (-px) + 'px,' + (px * .5) + 'px)' }, { transform: 'translate(' + px + 'px,' + (-px * .5) + 'px)' }, { transform: 'translate(' + (-px * .5) + 'px,0)' }, { transform: 'translate(0,0)' }], { duration: 300 });
+  }
+  function fire(side) {
+    var o = stageXY(svg), sc = o.r.width / 240;
+    var baseX = o.r.left - o.sr.left, y = o.r.top - o.sr.top + 128 * sc;
+    var x = side === 'L' ? baseX + (-33) * sc : baseX + 273 * sc;
+    var b = document.createElement('div'); b.className = 'bolt ' + side; b.style.top = (y - 9) + 'px';
+    var dist;
+    if (side === 'L') { b.style.left = (x - 320) + 'px'; dist = -(x + 360); } else { b.style.left = x + 'px'; dist = (W - x) + 360; }
+    stage.appendChild(b);
+    flashAt(x, y, true); shake(7);
+    anim(spin, [{ transform: 'translateX(0)' }, { transform: 'translateX(' + (side === 'L' ? 12 : -12) + 'px)' }, { transform: 'translateX(0)' }], { duration: 280, easing: 'ease-out' });
+    anim(b, [{ transform: 'translateX(0)', opacity: 1 }, { transform: 'translateX(' + dist + 'px)', opacity: 1, offset: .85 }, { transform: 'translateX(' + dist + 'px)', opacity: 0 }], { duration: 560, easing: 'cubic-bezier(.4,0,.9,.6)' }).then(function () { b.remove(); });
+    setTimeout(function () { flashAt(side === 'L' ? 6 : W - 6, y, true); }, 380);
+  }
+  function raise(arm, deg) { return anim(arm, [{ transform: 'rotate(0deg)' }, { transform: 'rotate(' + deg + 'deg)' }], { duration: 170, easing: 'ease-out', fill: 'forwards' }); }
+  function lower(arm, deg) { return anim(arm, [{ transform: 'rotate(' + deg + 'deg)' }, { transform: 'rotate(0deg)' }], { duration: 260, easing: 'ease-in-out', fill: 'forwards' }); }
+
+  function showEnd() { cta.classList.add('show'); skipBtn.hidden = true; bob.classList.add('idle'); }
+
+  function finalize() {
+    token++; cancelAll(); clearFx();
+    drop.style.transform = 'translateY(0)'; armL.style.transform = 'rotate(0deg)'; armR.style.transform = 'rotate(0deg)';
+    var past = performance.now() - 2000;
+    cards.forEach(function (c) { c.start = past; });
+    showEnd();
+  }
+
+  async function play() {
+    var my = ++token, ok = function () { return my === token; };
+    resetScene();
+    skipBtn.hidden = false;
+    await sleep(600); if (!ok()) return;
+    var Hh = stage.clientHeight;
+    await anim(drop, [{ transform: 'translateY(' + (-Hh * 1.3) + 'px)' }, { transform: 'translateY(0)' }], { duration: 820, easing: 'cubic-bezier(.55,.05,.9,.55)', fill: 'forwards' });
+    if (!ok()) return;
+    cancelAll(); drop.style.transform = 'translateY(0)';
+    shockwave(); shake(9);
+    await sleep(250); if (!ok()) return;
+    anim(spin, [{ transform: 'rotateY(0deg)' }, { transform: 'rotateY(720deg)' }], { duration: 1000, easing: 'ease-in-out' });
+    await anim(drop, [{ transform: 'translateY(0)' }, { transform: 'translateY(-95px)', offset: .45 }, { transform: 'translateY(0)' }], { duration: 1000, easing: 'ease-in-out' });
+    if (!ok()) return;
+    shockwave();
+    await sleep(150); if (!ok()) return;
+    await raise(armL, 90); if (!ok()) return;
+    fire('L');
+    await sleep(520); if (!ok()) return;
+    await raise(armR, -90); if (!ok()) return;
+    fire('R');
+    await sleep(650); if (!ok()) return;
+    lower(armL, 90); await lower(armR, -90); if (!ok()) return;
+    await sleep(120); if (!ok()) return;
+    var now = performance.now();
+    cards.forEach(function (c, idx) { c.start = now + idx * 130; });
+    await sleep(1300); if (!ok()) return;
+    showEnd();
+  }
+
+  skipBtn.addEventListener('click', finalize);
+  replayBtn.addEventListener('click', function () { if (reduce) { finalize(); } else { play(); } });
+
+  sizeCanvas();
+  requestAnimationFrame(frame);
+  if (reduce) { finalize(); } else { play(); }
+})();
+</script>
+
+</body></html>
